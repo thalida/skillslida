@@ -63,6 +63,18 @@ To install fresh on a new machine:
    ]
    ```
 
+3. Enable the plugin in `~/.claude/settings.json`:
+
+   ```json
+   {
+     "enabledPlugins": {
+       "skillslida@local": true
+     }
+   }
+   ```
+
+4. Start a new Claude Code session — skills will be available immediately.
+
 ## Security
 
 This is a **public** repo. Do not commit:

@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# Sensitive Claude config
+settings.local.json
+*.local
+
+# Environment files
+.env
+.env.*

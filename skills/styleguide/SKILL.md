@@ -1,5 +1,5 @@
 ---
-name: styleguide
+name: skillslida:styleguide
 description: Generate a static HTML brand/styleguide exploration page for any project. Explores the codebase for existing design patterns, asks multi-select questions about aesthetic direction, and produces a self-contained HTML file with multiple visual theme options (color palettes, typography, UI components, and wireframes). Use when the user wants to explore visual directions, brand options, or redesign ideas.
 argument-hint: "[output-filename]"
 allowed-tools: Read, Glob, Grep, Write, AskUserQuestion

@@ -11,10 +11,11 @@ Custom skills that extend Claude Code's behavior. Skills are model-invoked — C
 ```
 skillslida/
 ├── .claude-plugin/
-│   └── plugin.json       # Plugin metadata
+│   ├── plugin.json         # Plugin metadata
+│   └── marketplace.json    # Marketplace manifest (for local installation)
 ├── skills/
 │   └── <skill-name>/
-│       └── SKILL.md      # Skill definition
+│       └── SKILL.md        # Skill definition
 └── README.md
 ```
 
@@ -46,34 +47,22 @@ skillslida/
 
 ## Local installation
 
-This plugin is registered in `~/.claude/plugins/installed_plugins.json` with `installPath` pointing at this cloned directory. Edits are live immediately — no update command needed.
+To install on a new machine:
 
-To install fresh on a new machine:
-1. Clone this repo to `~/Documents/Repos/skillslida/`
-2. Add to `~/.claude/plugins/installed_plugins.json`:
-   ```json
-   "skillslida@local": [
-     {
-       "scope": "user",
-       "installPath": "/Users/<you>/Documents/Repos/skillslida",
-       "version": "local",
-       "installedAt": "<ISO timestamp>",
-       "lastUpdated": "<ISO timestamp>"
-     }
-   ]
+1. Clone this repo:
+   ```bash
+   git clone https://github.com/thalida/skillslida ~/Documents/Repos/skillslida
    ```
 
-3. Enable the plugin in `~/.claude/settings.json`:
-
-   ```json
-   {
-     "enabledPlugins": {
-       "skillslida@local": true
-     }
-   }
+2. Register it as a marketplace and install:
+   ```bash
+   claude plugin marketplace add ~/Documents/Repos/skillslida
+   claude plugin install skillslida@skillslida
    ```
 
-4. Start a new Claude Code session — skills will be available immediately.
+3. Start a new Claude Code session — skills will be available immediately.
+
+Since the plugin installs from this local directory, edits to skill files take effect on the next Claude Code session — no reinstall needed.
 
 ## Security
 

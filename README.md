@@ -7,7 +7,7 @@ Custom skills that extend Claude Code's behavior. Skills are model-invoked — C
 ## Getting started
 
 ```bash
-claude plugin marketplace add github:thalida/skillslida
+claude plugin marketplace add thalida/skillslida
 claude plugin install skillslida@skillslida
 ```
 

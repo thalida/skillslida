@@ -93,7 +93,6 @@ description: "[One-sentence summary]"
 publishedOn: YYYY-MM-DD
 planType: "design"
 topic: "[topic-slug from filename]"
-status: "planned"
 tags: ["relevant", "tags"]
 ---
 ```

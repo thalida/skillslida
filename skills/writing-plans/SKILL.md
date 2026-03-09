@@ -26,7 +26,6 @@ description: "[One-sentence goal summary]"
 publishedOn: YYYY-MM-DD
 planType: "implementation"
 topic: "[feature-name-slug]"
-status: "planned"
 tags: ["relevant", "tags"]
 ---
 ```
